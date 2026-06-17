@@ -108,6 +108,8 @@
   .faq-body{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s;padding:0 1.5rem}
   .faq-body.open{max-height:600px;padding:0 1.5rem 1.5rem}
   .faq-body p{font-family:'Poppins',sans-serif;font-size:.875rem;line-height:1.85;color:var(--text-muted);margin:0;border-top:1px solid var(--border);padding-top:1.1rem}
+  .faq-body .blog-list{margin:1rem 0 0}
+  .faq-body .blog-list li{font-size:.85rem}
 
   /* CTA */
   .cta-section{padding:5.5rem 6%;text-align:center;background:linear-gradient(160deg,var(--bg-hero) 0%,#101724 50%,#0E2035 100%);position:relative;overflow:hidden}
@@ -301,7 +303,15 @@
         <span class="faq-q">Which foundation models are best for enterprise GenAI in 2026?</span>
         <span class="faq-icon" aria-hidden="true">+</span>
       </button>
-      <div class="faq-body" id="fa3"><p>The honest answer is that the specific "best" model changes faster than any published guide can track. The frontier leaders as of early 2026 — OpenAI's GPT-5 series, Anthropic's Claude Opus and Sonnet 4.x line, and Google's Gemini 3 family — will likely be superseded by the time you scope your next project. Selecting on this quarter's leaderboard is a mistake. Select on criteria that stay stable: performance on your use case measured against your own evaluation set (public benchmarks rank general capability, not your specific retrieval and generation task); context window if you process long documents (current frontier models support one million tokens or more, but larger context costs more per query, so size it to the use case); deployment and data-residency constraints (strong open-weight families — Llama, Qwen, Mistral, DeepSeek — are the practical options for private deployment and have closed much of the gap with proprietary APIs); and total cost at production scale, not list price per token (prompt length, retrieval chunk size, and output verbosity drive real cost more than the headline per-token rate).</p></div>
+      <div class="faq-body" id="fa3">
+        <p>The honest answer is that the specific "best" model changes faster than any published guide can track. The frontier leaders as of early 2026 — OpenAI's GPT-5 series, Anthropic's Claude Opus and Sonnet 4.x line, and Google's Gemini 3 family — will likely be superseded by the time you scope your next project. Selecting on this quarter's leaderboard is a mistake. Select on criteria that stay stable:</p>
+        <ul class="blog-list">
+          <li><strong>Performance on your use case</strong>, measured against your own evaluation set. Public benchmarks rank general capability — they do not predict performance on your specific retrieval and generation task.</li>
+          <li><strong>Context window</strong>, if you process long documents. Current frontier models support one million tokens or more, but larger context costs more per query, so size it to the use case rather than defaulting to the maximum.</li>
+          <li><strong>Deployment and data-residency constraints.</strong> Strong open-weight families — Llama, Qwen, Mistral, DeepSeek — are the practical options for private deployment and have closed much of the gap with proprietary APIs.</li>
+          <li><strong>Total cost at production scale</strong>, not list price per token. Prompt length, retrieval chunk size, and output verbosity drive real cost more than the headline per-token rate.</li>
+        </ul>
+      </div>
     </div>
     <div class="faq-card">
       <button class="faq-btn" aria-expanded="false" aria-controls="fa4" onclick="toggleFAQ(this)" type="button">
