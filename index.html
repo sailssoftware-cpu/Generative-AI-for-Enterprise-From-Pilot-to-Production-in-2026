@@ -26,7 +26,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sailssoftware.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://sailssoftware.com/blog"},{"@type":"ListItem","position":3,"name":"Generative AI for Enterprise: From Pilot to Production in 2026","item":"https://sailssoftware.com/blog/generative-ai-for-enterprise"}]}
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between RAG and fine-tuning for enterprise GenAI?","acceptedAnswer":{"@type":"Answer","text":"RAG retrieves relevant documents at query time and includes them in the model's context — the model generates a response grounded in your actual content, with source attribution. Fine-tuning trains the model on your data to internalize domain pattern"}},{"@type":"Question","name":"How much does enterprise generative AI implementation cost in 2026?","acceptedAnswer":{"@type":"Answer","text":"Enterprise GenAI implementation costs range from approximately $80,000 for a focused single-use-case RAG implementation on clean, well-structured data to $500,000 or more for a multi-model, multi-use-case platform deployment. The primary cost drivers"}},{"@type":"Question","name":"Which foundation models are best for enterprise GenAI in 2026?","acceptedAnswer":{"@type":"Answer","text":"The leading enterprise foundation models in 2026 are GPT-4o and o3 from OpenAI (strongest function-calling implementation, largest ecosystem of enterprise tooling), Claude 3 from Anthropic (largest context window at 200K tokens, strongest instruction"}},{"@type":"Question","name":"How long does enterprise GenAI implementation take?","acceptedAnswer":{"@type":"Answer","text":"A focused enterprise GenAI implementation — single use case, single architecture pattern, well-scoped requirements — takes 10 to 16 weeks from discovery to production when data infrastructure is in acceptable condition. When data remediation is requi"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the difference between RAG and fine-tuning for enterprise GenAI?","acceptedAnswer":{"@type":"Answer","text":"RAG retrieves relevant documents at query time and includes them in the model's context — the model generates a response grounded in your actual content, with source attribution. Fine-tuning trains the model on your data to internalize domain pattern"}},{"@type":"Question","name":"How much does enterprise generative AI implementation cost in 2026?","acceptedAnswer":{"@type":"Answer","text":"Enterprise GenAI implementation costs range from approximately $80,000 for a focused single-use-case RAG implementation on clean, well-structured data to $500,000 or more for a multi-model, multi-use-case platform deployment. The primary cost drivers"}},{"@type":"Question","name":"Which foundation models are best for enterprise GenAI in 2026?","acceptedAnswer":{"@type":"Answer","text":"The honest answer is that the specific best model changes faster than any published guide can track. Select on criteria that stay stable: performance on your use case measured against your own evaluation set, context window sized to your need, deployment and data-residency constraints, and total cost at production scale rather than list price per token"}},{"@type":"Question","name":"How long does enterprise GenAI implementation take?","acceptedAnswer":{"@type":"Answer","text":"A focused enterprise GenAI implementation — single use case, single architecture pattern, well-scoped requirements — takes 10 to 16 weeks from discovery to production when data infrastructure is in acceptable condition. When data remediation is requi"}}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -147,6 +147,18 @@
     .hero,.cta-section,.faq-section{padding-left:max(6%,env(safe-area-inset-left));padding-right:max(6%,env(safe-area-inset-right))}
   }
   @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
+  /* Extra small ≤360px */
+  @media(max-width:360px){
+    .container,.container-wide{padding:0 3.5%}
+    .hero h1{font-size:1.1rem}
+    .blog-section h2{font-size:1rem}
+    .tag-cluster{font-size:.6rem}
+    .section-label{font-size:.6rem}
+  }
+  /* Landscape mobile */
+  @media(max-width:768px) and (orientation:landscape){
+    .hero{padding-top:2rem;padding-bottom:2rem}
+  }
   /* Grid collapse on mobile */
   @media (max-width: 600px) { .agent-loop-grid, .faq-grid { grid-template-columns: 1fr; } }
 </style>
@@ -207,7 +219,7 @@
 <li>Is document-level access control enforced in your retrieval layer? If your GenAI system retrieves documents the querying user should not have access to, you have a data governance incident — regardless of whether the user recognizes the retrieved content as sensitive.</li>
 <li>Is metadata available and consistent? Chunking strategy in RAG depends on document metadata. Without reliable metadata (document type, date, author, classification level, department), retrieval precision degrades significantly and cannot be debugged efficiently.</li>
 </ul>
-<div class="stat-callout"><p><strong>Gartner estimates that through 2026, at least 30% of enterprise generative AI projects will be abandoned after proof of concept, with poor data quality cited as the primary cause alongside inadequate risk controls and unclear business value attribution. (Source: Gartner Predicts 2025, Data and Analytics)</strong></p></div>
+<div class="stat-callout"><p><strong>Gartner predicts that at least 30% of generative AI projects will be abandoned after proof of concept by the end of 2025, citing poor data quality, inadequate risk controls, escalating costs, and unclear business value as the primary causes. (Source: Gartner press release, July 29, 2024.)</strong></p></div>
 
   </div>
 </section>
@@ -289,7 +301,7 @@
         <span class="faq-q">Which foundation models are best for enterprise GenAI in 2026?</span>
         <span class="faq-icon" aria-hidden="true">+</span>
       </button>
-      <div class="faq-body" id="fa3"><p>The leading enterprise foundation models in 2026 are GPT-4o and o3 from OpenAI (strongest function-calling implementation, largest ecosystem of enterprise tooling), Claude 3 from Anthropic (largest context window at 200K tokens, strongest instruction-following for complex multi-step prompts, preferred for long-document processing), and Gemini 1.5 Pro from Google (native multimodal capability, deep Google Cloud integration). For on-premise or private cloud deployments with data sovereignty requirements, Llama 3 and Mistral are the leading open-source options. Select based on your specific performance requirements for the target use case — not on brand recognition or analyst rankings.</p></div>
+      <div class="faq-body" id="fa3"><p>The honest answer is that the specific "best" model changes faster than any published guide can track. The frontier leaders as of early 2026 — OpenAI's GPT-5 series, Anthropic's Claude Opus and Sonnet 4.x line, and Google's Gemini 3 family — will likely be superseded by the time you scope your next project. Selecting on this quarter's leaderboard is a mistake. Select on criteria that stay stable: performance on your use case measured against your own evaluation set (public benchmarks rank general capability, not your specific retrieval and generation task); context window if you process long documents (current frontier models support one million tokens or more, but larger context costs more per query, so size it to the use case); deployment and data-residency constraints (strong open-weight families — Llama, Qwen, Mistral, DeepSeek — are the practical options for private deployment and have closed much of the gap with proprietary APIs); and total cost at production scale, not list price per token (prompt length, retrieval chunk size, and output verbosity drive real cost more than the headline per-token rate).</p></div>
     </div>
     <div class="faq-card">
       <button class="faq-btn" aria-expanded="false" aria-controls="fa4" onclick="toggleFAQ(this)" type="button">
